@@ -12,13 +12,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 /* Инициализируем приложение через Firebase */
 firebase.initializeApp({
-  apiKey: "AIzaSyAlcwxYkcQ3IBVmmlYxJ-jNeuwpsVkCTps",
-  authDomain: "cool-realtime-chat.firebaseapp.com",
-  projectId: "cool-realtime-chat",
-  storageBucket: "cool-realtime-chat.appspot.com",
-  messagingSenderId: "571318214670",
-  appId: "1:571318214670:web:2a50477d5d68ac977fdc5f",
-  measurementId: "G-0ZKXSB3D47",
+  //config
 });
 
 const auth = firebase.auth();
