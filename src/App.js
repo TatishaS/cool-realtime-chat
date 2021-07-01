@@ -12,7 +12,13 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 /* Инициализируем приложение через Firebase */
 firebase.initializeApp({
-  //config
+  apiKey: "AIzaSyAlcwxYkcQ3IBVmmlYxJ-jNeuwpsVkCTps",
+  authDomain: "cool-realtime-chat.firebaseapp.com",
+  projectId: "cool-realtime-chat",
+  storageBucket: "cool-realtime-chat.appspot.com",
+  messagingSenderId: "571318214670",
+  appId: "1:571318214670:web:2a50477d5d68ac977fdc5f",
+  measurementId: "G-0ZKXSB3D47",
 });
 
 const auth = firebase.auth();
@@ -37,7 +43,7 @@ function App() {
 
 /**
  *
- * @returns Функция SignIn рендерит кнопку Sign in with Google аккаунт, при клике на которую запускается колбэк функция signInWithGoogle
+ * Функция SignIn рендерит кнопку Sign in with Google аккаунт, при клике на которую запускается колбэк функция signInWithGoogle
  */
 function SignIn() {
   /**
@@ -49,7 +55,9 @@ function SignIn() {
   };
 
   return (
-    <button onClick={signInWithGoogle}>Sign in with Google account</button>
+    <button className="sign-in" onClick={signInWithGoogle}>
+      Sign in with Google account
+    </button>
   );
 }
 
@@ -119,9 +127,7 @@ function ChatRoom() {
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
         />
-        <button className="btn" type="submit">
-          Send
-        </button>
+        <button type="submit">Send</button>
       </form>
     </>
   );
